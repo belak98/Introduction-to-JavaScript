@@ -23,7 +23,7 @@ Do the following:
 let votingAge = 23;
 
 if(votingAge >= 18){
-  console.log("true");
+  console.log('task 1a', "true");
 }
 
 
@@ -48,7 +48,7 @@ if(valueOne > valueTwo){
   valueOne = valueOne + valueTwo;
 }
 
-console.log(valueOne);
+console.log('task 1b', valueOne);
 
 
 /*
@@ -64,7 +64,7 @@ Do the following:
 
 let nineteen = Number("1999");
 
-console.log(nineteen);
+console.log('task 1c', nineteen);
 
 /*
 Task 1d - Multiply
@@ -79,7 +79,7 @@ function multiply(a, b){
   return a * b
 }
 
-console.log(multiply(2, 3));
+console.log('task 1d', multiply(2, 3));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -125,21 +125,25 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(weight, age){
-  if(age > .166 && age < .333){
-    return weight * .1
-  }else if(age > 1 && weight <= 5 || age > .333 && age < .583){
-    return weight * .05
-  }else if(age > 1 && weight > 6 && weight < 10 || age > .583 && age < 1){
-    return weight * .04
-  }else if(age > 1 && weight > 11 && weight < 15){
-    return .03
-  }else if(age > 1 && weight > 15){
-  return weight * .02
+function hungryDog(weight, age){ 
+  if(age < 4/12){
+    return 0.1 * weight;
+  }else if(age < .582){
+    return 0.05 * weight;
+  }else if(age >= .582 && age < 1){
+    return 0.04 * weight;
+  }else if(age >= 1 && weight < 6){
+    return 0.05 * weight;
+  }else if(age >= 1 && weight < 11){
+    return 0.04 * weight;
+  }else if(age >= 1 && weight <= 15){
+    return 0.03 * weight;
+  }else if(age >= 1 && weight > 15){
+    return 0.02 * weight;
   }
 }
 
-console.log('task 3', hungryDog(15, 1));
+console.log('task 3', hungryDog(7, 5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -198,11 +202,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
 
-
+console.log('task 5', miles(5));
 
 //Task 5b - Feet to CM
 /*
@@ -212,11 +216,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
-
+console.log('task 5b', feet(23));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
