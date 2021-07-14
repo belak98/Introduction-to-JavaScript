@@ -255,11 +255,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(yourGrade){
+  if(yourGrade < 60){
+    return 'you got an F';
+  }else if(yourGrade < 70){
+    return 'you got a D'
+  }else if(yourGrade < 80){
+    return 'you got a C';
+  }else if(yourGrade < 90){
+    return 'you got a B'
+  }else if(yourGrade <= 100){
+    return 'you got an A'
+  }
 }
 
-
+console.log('task 7', grade(100));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
